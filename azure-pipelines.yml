@@ -5,6 +5,13 @@
     appType: 'functionAppLinux'
     appName: 'parnikakanagala'
     deployToSlotOrASE: true
+- task: AzureFunctionApp@2
+  inputs:
+    connectedServiceNameARM: 'Free Trial (ba21cbb8-744a-4f66-984f-70ea2ffb5aaa)'
+    appType: 'functionAppLinux'
+    appName: 'parnikakanagala'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
     resourceGroupName: 'Function'
     slotName: 'kanagala'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
