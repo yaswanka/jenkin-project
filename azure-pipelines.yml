@@ -1,4 +1,15 @@
 # Starter pipeline
+- task: AzureFunctionApp@2
+  inputs:
+    connectedServiceNameARM: 'Free Trial (ba21cbb8-744a-4f66-984f-70ea2ffb5aaa)'
+    appType: 'functionAppLinux'
+    appName: 'parnikakanagala'
+    deployToSlotOrASE: true
+    resourceGroupName: 'Function'
+    slotName: 'kanagala'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'JAVA|8'
+    deploymentMethod: 'auto'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
